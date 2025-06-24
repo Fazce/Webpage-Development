@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio showcasing my projects, skills, and contact information.">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav role = "navigation">
+            <div class="logo">My Portfolio</div>
+            <button class="menu-toggle">&#9776;</button> <!-- Hamburger Icon -->
+            <ul class="nav-links">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Daniel Nguyen I'm a passionate Computer Science major hoping to learn more about web development, programming, and problem-solving</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+    <h2>Projects</h2>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web')">Web Development</button>
+        <button onclick="filterProjects('app')">App Development</button>
+    </div>
+
+    <!-- Project Items -->
+    <div class="projects-container">
+        <article class="project-item web">
+            <figure>
+                <img src="project1.jpg" alt="Project 1 Screenshot" onclick="openLightbox(this)">
+                <figcaption>Project 1 - A web application for task management.</figcaption>
+            </figure>
+            <p>Description of Project 1 goes here.</p>
+        </article>
+
+        <article class="project-item app">
+            <figure>
+                <img src="project2.jpg" alt="Project 2 Screenshot" onclick="openLightbox(this)">
+                <figcaption>Project 2 - A mobile app for productivity.</figcaption>
+            </figure>
+            <p>Description of Project 2 goes here.</p>
+        </article>
+    </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Project Image">
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit-form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+
+            <button type="submit" aria-label="Send Message">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Link -->
+     <script src="script.js"></script>
+
+</body>
+</html>
+
